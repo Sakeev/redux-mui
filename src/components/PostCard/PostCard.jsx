@@ -8,21 +8,19 @@ import {
 } from "@mui/material";
 import React from "react";
 
-const PostCard = () => {
+const PostCard = ({ card }) => {
   return (
-    <Card sx={{ maxWidth: 345, margin: "1%" }}>
-      <CardMedia
-        sx={{ height: 140 }}
-        image="/static/images/cards/contemplative-reptile.jpg"
-        title="green iguana"
-      />
+    <Card sx={{ maxWidth: 345, margin: "1%", width: "20%" }}>
+      <CardMedia sx={{ height: 200 }} image={card.image} title="green iguana" />
       <CardContent>
         <Typography gutterBottom variant="h5" component="div">
-          Lizard
+          {card.name}
+        </Typography>
+        <Typography variant="body1" color="text.secondary">
+          Species: {card.species}
         </Typography>
         <Typography variant="body2" color="text.secondary">
-          Lizards are a widespread group of squamate reptiles, with over 6,000
-          species, ranging across all continents except Antarctica
+          Status: {card.status}
         </Typography>
       </CardContent>
       <CardActions>

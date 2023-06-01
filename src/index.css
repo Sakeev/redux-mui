@@ -11,10 +11,14 @@ footer {
   color: white;
   font-size: 25px;
   font-weight: bold;
-  position: fixed;
-  bottom: 0;
+  /* position: fixed;
+  bottom: 0; */
   /* text-align: center; */
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+ul {
+  justify-content: center;
 }
