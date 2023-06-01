@@ -3,7 +3,7 @@ import axios from "axios";
 
 export const getPosts = createAsyncThunk("@posts/getPosts", async (page) => {
   let { data } = await axios.get(
-    "https://rickandmortyapi.com/api/character?page=" + page
+    `https://rickandmortyapi.com/api/character?page=${page}`
   );
   return data;
 });
